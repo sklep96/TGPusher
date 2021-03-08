@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>Telegram Pusher</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+            background: white;
+        }
+
+        #mainContainer {
+            width: 420px;
+            padding-left: 1em;
+        }
+
+        div.mainMenu, #actions div:hover {
+            cursor: pointer;
+            text-align: center;
+            padding: 10px 5px;
+            margin-right: 0.4em;
+        }
+
+            div.mainMenu:hover, #actions div:hover {
+                background: #aaaaaa;
+            }
+
+        #message{
+            width: 400px;
+            height: 100px;
+            padding: 4px;
+        }
+    </style>
+    <script src="font-awesome.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="preferences" style="text-align: right">
+            <span style="font-size: 2em; color: #061d6e; margin-right: 5px">
+                <i style="cursor: pointer" class="fas fa-cog"></i>
+            </span>
+        </div>
+        <hr id="prefHr" />
+        <label for="message">Text to send in bot</label>
+            <textarea id = "message" onchange="showSubmitBtn()" ></textarea>
+		<div id="sendMessage" class="mainMenu"><i class="fas fa-paper-plane"></i> Send text</div>
+        <div id="sendURL" class="mainMenu"><i class="fas fa-paper-plane"></i> Share URL</div>
+        <div id="addThisSite" class="mainMenu">Add this site (in dev)</div>
+        <div id="actions"></div>
+    </div>
+</body>
+</html>
